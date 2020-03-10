@@ -10,7 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack(alignment: .leading) {
+            Text("Redback Spider")
+                .font(.title)
+            Text("Latrodectus hasselti")
+                .font(.headline)
+                .fontWeight(.light)
+            HStack() {
+                Text("Size Range:")
+                Text("1 cm (female); 3 mm - 4 mm (male)")
+            }
+            HStack() {
+                Text("Habitats:")
+                Text("peridomestic, pest")
+            }
+            HStack() {
+                Text("Feeding Habits")
+                Text("carnivorous, insectivorous, predator")
+            }
+        }
     }
 }
 
