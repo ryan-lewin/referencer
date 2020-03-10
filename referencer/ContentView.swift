@@ -9,24 +9,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    let redback: Spider
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Redback Spider")
+        VStack(alignment: .center) {
+            Image("redback")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 400.0,height:300)
+            Divider()
+            Text("\(redback.name)")
                 .font(.title)
-            Text("Latrodectus hasselti")
+            Text("\(redback.scientificName)")
                 .font(.headline)
                 .fontWeight(.light)
-            HStack() {
-                Text("Size Range:")
-                Text("1 cm (female); 3 mm - 4 mm (male)")
-            }
-            HStack() {
-                Text("Habitats:")
-                Text("peridomestic, pest")
-            }
-            HStack() {
-                Text("Feeding Habits")
-                Text("carnivorous, insectivorous, predator")
+            Divider()
+            VStack(alignment: .leading ,spacing: 10) {
+                HStack() {
+                    Text("Species:")
+                        .fontWeight(.bold)
+                    Text("\(redback.species)")
+                }
+                HStack() {
+                    Text("Genus:")
+                        .fontWeight(.bold)
+                    Text("\(redback.genus)")
+                }
+                HStack() {
+                    Text("Family")
+                        .fontWeight(.bold)
+                    Text("\(redback.family)")
+                }
             }
         }
     }
@@ -34,6 +46,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(redback: Spider(
+        name: "Redback Spider",
+        scientificName: "Latrodectus hasselti",
+        species: "hasselti",
+        family: "Latrodectus",
+        genus: "Theridiidae"))
     }
 }

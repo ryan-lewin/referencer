@@ -15,6 +15,7 @@
 		E48278E12417113400FE687D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48278DF2417113400FE687D /* LaunchScreen.storyboard */; };
 		E48278EC2417113400FE687D /* referencerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278EB2417113400FE687D /* referencerTests.swift */; };
 		E48278F72417113400FE687D /* referencerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278F62417113400FE687D /* referencerUITests.swift */; };
+		E4F6A7DC241777F800796924 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6A7DB241777F800796924 /* Spider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E48278F22417113400FE687D /* referencerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = referencerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48278F62417113400FE687D /* referencerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = referencerUITests.swift; sourceTree = "<group>"; };
 		E48278F82417113400FE687D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F6A7DB241777F800796924 /* Spider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E48278DF2417113400FE687D /* LaunchScreen.storyboard */,
 				E48278E22417113400FE687D /* Info.plist */,
 				E48278DC2417113400FE687D /* Preview Content */,
+				E4F6A7DB241777F800796924 /* Spider.swift */,
 			);
 			path = referencer;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				E48278D52417113200FE687D /* AppDelegate.swift in Sources */,
 				E48278D72417113200FE687D /* SceneDelegate.swift in Sources */,
+				E4F6A7DC241777F800796924 /* Spider.swift in Sources */,
 				E48278D92417113200FE687D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
