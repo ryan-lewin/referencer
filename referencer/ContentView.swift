@@ -14,8 +14,8 @@ struct ContentView: View {
         VStack(alignment: .center) {
             Image("\(redback.pic)")
                 .resizable()
-                .scaledToFit()
-                .frame(width: 400.0,height:300)
+                .aspectRatio(contentMode: .fit)
+                .padding(.bottom)
             Divider()
             Text("\(redback.name)")
                 .font(.title)
