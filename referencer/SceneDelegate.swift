@@ -18,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         scientificName: "Latrodectus hasselti",
         species: "hasselti",
         family: "Latrodectus",
-        genus: "Theridiidae")
+        genus: "Theridiidae",
+        pic: "redback")
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

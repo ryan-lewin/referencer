@@ -25,13 +25,15 @@ class referencerTests: XCTestCase {
         scientificName: "Latrodectus hasselti",
         species: "hasselti",
         family: "Latrodectus",
-        genus: "Theridiidae")
+        genus: "Theridiidae",
+        pic: "redback")
         
         XCTAssertEqual(redback.name, "Redback Spider")
         XCTAssertEqual(redback.scientificName, "Latrodectus hasselti")
         XCTAssertEqual(redback.species, "hasselti")
         XCTAssertEqual(redback.family, "Latrodectus")
         XCTAssertEqual(redback.genus, "Theridiidae")
+        XCTAssertEqual(redback.pic, "redback")
     }
 
     func testPerformanceExample() {

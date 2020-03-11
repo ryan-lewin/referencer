@@ -12,7 +12,7 @@ struct ContentView: View {
     let redback: Spider
     var body: some View {
         VStack(alignment: .center) {
-            Image("redback")
+            Image("\(redback.pic)")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 400.0,height:300)
@@ -51,6 +51,7 @@ struct ContentView_Previews: PreviewProvider {
         scientificName: "Latrodectus hasselti",
         species: "hasselti",
         family: "Latrodectus",
-        genus: "Theridiidae"))
+        genus: "Theridiidae",
+        pic: "redback"))
     }
 }
