@@ -19,7 +19,7 @@ class referencerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testSpider() {
+    func testSpiderName() {
         let redback = Spider(
         name: "Redback Spider",
         scientificName: "Latrodectus hasselti",
@@ -27,13 +27,63 @@ class referencerTests: XCTestCase {
         family: "Latrodectus",
         genus: "Theridiidae",
         pic: "redback")
-        
         XCTAssertEqual(redback.name, "Redback Spider")
+    }
+    
+    func testSpiderScientificName() {
+        let redback = Spider(
+        name: "Redback Spider",
+        scientificName: "Latrodectus hasselti",
+        species: "hasselti",
+        family: "Latrodectus",
+        genus: "Theridiidae",
+        pic: "redback")
         XCTAssertEqual(redback.scientificName, "Latrodectus hasselti")
+    }
+    
+    func testSpiderSpecies() {
+        let redback = Spider(
+        name: "Redback Spider",
+        scientificName: "Latrodectus hasselti",
+        species: "hasselti",
+        family: "Latrodectus",
+        genus: "Theridiidae",
+        pic: "redback")
         XCTAssertEqual(redback.species, "hasselti")
+    }
+    
+    
+    func testSpiderFamily() {
+        let redback = Spider(
+        name: "Redback Spider",
+        scientificName: "Latrodectus hasselti",
+        species: "hasselti",
+        family: "Latrodectus",
+        genus: "Theridiidae",
+        pic: "redback")
         XCTAssertEqual(redback.family, "Latrodectus")
+    }
+    
+    func testSpiderGenus() {
+        let redback = Spider(
+        name: "Redback Spider",
+        scientificName: "Latrodectus hasselti",
+        species: "hasselti",
+        family: "Latrodectus",
+        genus: "Theridiidae",
+        pic: "redback")
         XCTAssertEqual(redback.genus, "Theridiidae")
-        XCTAssertEqual(redback.pic, "redback")
+    }
+    
+    func testSpiderPic() {
+        let redback = Spider(
+        name: "Redback Spider",
+        scientificName: "Latrodectus hasselti",
+        species: "hasselti",
+        family: "Latrodectus",
+        genus: "Theridiidae",
+        pic: "redback")
+         XCTAssertEqual(redback.pic, "redback")
     }
 
     func testPerformanceExample() {
