@@ -9,6 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    var spiderDir: SpiderDirectory
+    var body: some View {
+        Text("test")
+    }
+}
+
+struct SpiderDetailView: View {
     let redback: Spider
     var body: some View {
         VStack(alignment: .center) {
@@ -46,12 +53,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(redback: Spider(
-        name: "Redback Spider",
-        scientificName: "Latrodectus hasselti",
-        species: "hasselti",
-        family: "Latrodectus",
-        genus: "Theridiidae",
-        pic: "redback"))
+        ContentView(spiderDir: SpiderDirectory())
     }
 }

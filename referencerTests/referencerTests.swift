@@ -10,9 +10,16 @@ import XCTest
 @testable import referencer
 
 class referencerTests: XCTestCase {
-
+    var redback: Spider?
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        redback = Spider(
+        name: "Redback Spider",
+        scientificName: "Latrodectus hasselti",
+        species: "hasselti",
+        family: "Latrodectus",
+        genus: "Theridiidae",
+        pic: "redback")
     }
 
     override func tearDown() {
@@ -20,70 +27,28 @@ class referencerTests: XCTestCase {
     }
 
     func testSpiderName() {
-        let redback = Spider(
-        name: "Redback Spider",
-        scientificName: "Latrodectus hasselti",
-        species: "hasselti",
-        family: "Latrodectus",
-        genus: "Theridiidae",
-        pic: "redback")
-        XCTAssertEqual(redback.name, "Redback Spider")
+        XCTAssertEqual(redback?.name, "Redback Spider")
     }
     
     func testSpiderScientificName() {
-        let redback = Spider(
-        name: "Redback Spider",
-        scientificName: "Latrodectus hasselti",
-        species: "hasselti",
-        family: "Latrodectus",
-        genus: "Theridiidae",
-        pic: "redback")
-        XCTAssertEqual(redback.scientificName, "Latrodectus hasselti")
+        XCTAssertEqual(redback?.scientificName, "Latrodectus hasselti")
     }
     
     func testSpiderSpecies() {
-        let redback = Spider(
-        name: "Redback Spider",
-        scientificName: "Latrodectus hasselti",
-        species: "hasselti",
-        family: "Latrodectus",
-        genus: "Theridiidae",
-        pic: "redback")
-        XCTAssertEqual(redback.species, "hasselti")
+        XCTAssertEqual(redback?.species, "hasselti")
     }
     
     
     func testSpiderFamily() {
-        let redback = Spider(
-        name: "Redback Spider",
-        scientificName: "Latrodectus hasselti",
-        species: "hasselti",
-        family: "Latrodectus",
-        genus: "Theridiidae",
-        pic: "redback")
-        XCTAssertEqual(redback.family, "Latrodectus")
+        XCTAssertEqual(redback?.family, "Latrodectus")
     }
     
     func testSpiderGenus() {
-        let redback = Spider(
-        name: "Redback Spider",
-        scientificName: "Latrodectus hasselti",
-        species: "hasselti",
-        family: "Latrodectus",
-        genus: "Theridiidae",
-        pic: "redback")
-        XCTAssertEqual(redback.genus, "Theridiidae")
+        XCTAssertEqual(redback?.genus, "Theridiidae")
     }
     
     func testSpiderPic() {
-        let redback = Spider(
-        name: "Redback Spider",
-        scientificName: "Latrodectus hasselti",
-        species: "hasselti",
-        family: "Latrodectus",
-        genus: "Theridiidae",
-        pic: "redback")
-         XCTAssertEqual(redback.pic, "redback")
+         XCTAssertEqual(redback?.pic, "redback")
     }
 
     func testPerformanceExample() {
