@@ -9,8 +9,8 @@
 struct SpiderDirectory {
     var spiders: [Spider] = []
     
-    mutating func addSpider(name: String, scientificName: String, species: String, family: String, genus: String, pic: String) {
-        let spider = Spider(name: name, scientificName: scientificName, species: species, family: family, genus: genus, pic: pic)
+    mutating func addSpider(name: String, scientificName: String, species: String, family: String, genus: String, dangerLevel: String, pic: String) {
+        let spider = Spider(name: name, scientificName: scientificName, species: species, family: family, genus: genus, dangerLevel: dangerLevel, pic: pic)
         spiders.append(spider)
     }
     

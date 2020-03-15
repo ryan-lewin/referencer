@@ -39,6 +39,11 @@ struct SpiderDetailView: View {
                         .fontWeight(.bold)
                     Text("\(spider.family)")
                 }
+                HStack() {
+                    Text("Danger Level")
+                        .fontWeight(.bold)
+                    Text("\(spider.dangerLevel)")
+                }
             }
         }
     }

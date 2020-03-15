@@ -14,5 +14,6 @@ struct Spider {
     let species: String
     let family: String
     let genus: String
+    let dangerLevel: String
     let pic: String
 }

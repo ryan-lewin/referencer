@@ -35,6 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                           species: "hasselti",
                           family: "Latrodectus",
                           genus: "Theridiidae",
+                          dangerLevel: "Highly Dangerous",
                           pic: "redback")
         
         spiderDir.addSpider(name: "Funnel Web",
@@ -42,6 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                           species: "robustus",
                           family: "Hexathelidae",
                           genus: "Atrax",
+                          dangerLevel: "Highly Dangerous",
                           pic: "funnelweb")
         
         let contentView = ContentView(spiderDir: spiderDir)

@@ -17,11 +17,14 @@ struct MasterView: View {
                     HStack() {
                         Image(self.spiderDir.spiders[i].pic)
                             .resizable()
-                            .frame(width: 64, height: 64)
+                            .frame(width: 96, height: 96)
+                        Spacer()
                         Text(self.spiderDir.spiders[i].name)
                             .fontWeight(.bold)
-                        Text(self.spiderDir.spiders[i].scientificName)
+                        Spacer()
+                        Text(self.spiderDir.spiders[i].dangerLevel)
                             .fontWeight(.light)
+                            .foregroundColor(Color.red)
                     }
                 }
             }
