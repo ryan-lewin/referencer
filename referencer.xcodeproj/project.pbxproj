@@ -15,6 +15,8 @@
 		E48278E12417113400FE687D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48278DF2417113400FE687D /* LaunchScreen.storyboard */; };
 		E48278EC2417113400FE687D /* referencerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278EB2417113400FE687D /* referencerTests.swift */; };
 		E48278F72417113400FE687D /* referencerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278F62417113400FE687D /* referencerUITests.swift */; };
+		E4D8A31D241E0D5700655AEE /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8A31C241E0D5700655AEE /* MasterView.swift */; };
+		E4D8A31F241E0D9100655AEE /* SpiderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8A31E241E0D9100655AEE /* SpiderDetailView.swift */; };
 		E4DBCCE2241DDCEE0025BE1E /* SpiderDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DBCCE1241DDCEE0025BE1E /* SpiderDirectory.swift */; };
 		E4F6A7DC241777F800796924 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6A7DB241777F800796924 /* Spider.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		E48278F22417113400FE687D /* referencerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = referencerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48278F62417113400FE687D /* referencerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = referencerUITests.swift; sourceTree = "<group>"; };
 		E48278F82417113400FE687D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D8A31C241E0D5700655AEE /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		E4D8A31E241E0D9100655AEE /* SpiderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderDetailView.swift; sourceTree = "<group>"; };
 		E4DBCCE1241DDCEE0025BE1E /* SpiderDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderDirectory.swift; sourceTree = "<group>"; };
 		E4F6A7DB241777F800796924 /* Spider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +158,8 @@
 		E4DBCCE6241DEB460025BE1E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E4D8A31C241E0D5700655AEE /* MasterView.swift */,
+				E4D8A31E241E0D9100655AEE /* SpiderDetailView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -289,10 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D8A31D241E0D5700655AEE /* MasterView.swift in Sources */,
 				E48278D52417113200FE687D /* AppDelegate.swift in Sources */,
 				E48278D72417113200FE687D /* SceneDelegate.swift in Sources */,
 				E4F6A7DC241777F800796924 /* Spider.swift in Sources */,
 				E48278D92417113200FE687D /* ContentView.swift in Sources */,
+				E4D8A31F241E0D9100655AEE /* SpiderDetailView.swift in Sources */,
 				E4DBCCE2241DDCEE0025BE1E /* SpiderDirectory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
