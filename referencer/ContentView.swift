@@ -15,6 +15,7 @@ struct ContentView: View {
             MasterView(spiderDir: spiderDir)
                 .navigationBarTitle("Spiders")
         }
+            .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
