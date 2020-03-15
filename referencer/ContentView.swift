@@ -11,22 +11,38 @@ import SwiftUI
 struct ContentView: View {
     var spiderDir: SpiderDirectory
     var body: some View {
-        Text("test")
+        NavigationView {
+            MasterView(spiderDir: spiderDir)
+            .navigationBarTitle("Spiders")
+        }
+    }
+}
+
+struct MasterView: View {
+    var spiderDir: SpiderDirectory
+    var body: some View {
+        List {
+            ForEach(0..<spiderDir.spiders.count) { i in
+                NavigationLink(destination: SpiderDetailView(spider: self.spiderDir.spiders[i])){
+                    Text(self.spiderDir.spiders[i].name)
+                }
+            }
+        }
     }
 }
 
 struct SpiderDetailView: View {
-    let redback: Spider
+    let spider: Spider
     var body: some View {
         VStack(alignment: .center) {
-            Image("\(redback.pic)")
+            Image("\(spider.pic)")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.bottom)
             Divider()
-            Text("\(redback.name)")
+            Text("\(spider.name)")
                 .font(.title)
-            Text("\(redback.scientificName)")
+            Text("\(spider.scientificName)")
                 .font(.headline)
                 .fontWeight(.light)
             Divider()
@@ -34,17 +50,17 @@ struct SpiderDetailView: View {
                 HStack() {
                     Text("Species:")
                         .fontWeight(.bold)
-                    Text("\(redback.species)")
+                    Text("\(spider.species)")
                 }
                 HStack() {
                     Text("Genus:")
                         .fontWeight(.bold)
-                    Text("\(redback.genus)")
+                    Text("\(spider.genus)")
                 }
                 HStack() {
                     Text("Family")
                         .fontWeight(.bold)
-                    Text("\(redback.family)")
+                    Text("\(spider.family)")
                 }
             }
         }
