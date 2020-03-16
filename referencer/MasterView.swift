@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MasterView: View {
+    var colourScheme  = ["Highly Dangerous": "red", "Painful Bite": "yellow", "Low Risk": "green"]
     var spiderDir: SpiderDirectory
     var body: some View {
         List {
@@ -17,14 +18,14 @@ struct MasterView: View {
                     HStack() {
                         Image(self.spiderDir.spiders[i].pic)
                             .resizable()
-                            .frame(width: 96, height: 96)
+                            .frame(width: 64.0, height: 64.0)
                         Spacer()
                         Text(self.spiderDir.spiders[i].name)
                             .fontWeight(.bold)
                         Spacer()
                         Text(self.spiderDir.spiders[i].dangerLevel)
                             .fontWeight(.light)
-                            .foregroundColor(Color.red)
+                            .foregroundColor(Color.green)
                     }
                 }
             }

@@ -14,14 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     var spiderDir = SpiderDirectory()
-    
-//    let redback = Spider(
-//        name: "Redback Spider",
-//        scientificName: "Latrodectus hasselti",
-//        species: "hasselti",
-//        family: "Latrodectus",
-//        genus: "Theridiidae",
-//        pic: "redback")
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -29,8 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        
-        spiderDir.addSpider(name: "Redback",
+        spiderDir.addSpider(name: "Red-Back",
                           scientificName: "Latrodectus hasselti",
                           species: "hasselti",
                           family: "Latrodectus",
@@ -44,6 +35,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                           family: "Hexathelidae",
                           genus: "Atrax",
                           dangerLevel: "Highly Dangerous",
+                          pic: "funnelweb")
+        
+        spiderDir.addSpider(name: "White-Tail Spider",
+                          scientificName: "Atrax robustus",
+                          species: "robustus",
+                          family: "Hexathelidae",
+                          genus: "Atrax",
+                          dangerLevel: "Highly Dangerous",
+                          pic: "funnelweb")
+        
+        spiderDir.addSpider(name: "Mouse Spider",
+                          scientificName: "Atrax robustus",
+                          species: "robustus",
+                          family: "Hexathelidae",
+                          genus: "Atrax",
+                          dangerLevel: "Painful Bite",
+                          pic: "funnelweb")
+        
+        spiderDir.addSpider(name: "Painful Bite",
+                          scientificName: "Atrax robustus",
+                          species: "robustus",
+                          family: "Hexathelidae",
+                          genus: "Atrax",
+                          dangerLevel: "Highly Dangerous",
+                          pic: "funnelweb")
+        
+        spiderDir.addSpider(name: "Huntsman",
+                          scientificName: "Atrax robustus",
+                          species: "robustus",
+                          family: "Hexathelidae",
+                          genus: "Atrax",
+                          dangerLevel: "Low Risk",
+                          pic: "funnelweb")
+        
+        spiderDir.addSpider(name: "Trap-Door Spider",
+                          scientificName: "Atrax robustus",
+                          species: "robustus",
+                          family: "Hexathelidae",
+                          genus: "Atrax",
+                          dangerLevel: "Low Risk",
                           pic: "funnelweb")
         
         let contentView = ContentView(spiderDir: spiderDir)

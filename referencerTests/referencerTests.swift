@@ -11,19 +11,63 @@ import XCTest
 
 class referencerTests: XCTestCase {
     var redback: Spider?
+    var spiderDir = SpiderDirectory()
     
     override func setUp() {
+        
+        spiderDir.addSpider(
+            name: "Funnel Web",
+            scientificName: "Atrax robustus",
+            species: "robustus",
+            family: "Hexathelidae",
+            genus: "Atrax",
+            dangerLevel: "Highly Dangerous",
+            pic: "funnelweb")
+        
         redback = Spider(
-        name: "Redback Spider",
-        scientificName: "Latrodectus hasselti",
-        species: "hasselti",
-        family: "Latrodectus",
-        genus: "Theridiidae",
-        pic: "redback")
+            name: "Redback Spider",
+            scientificName: "Latrodectus hasselti",
+            species: "hasselti",
+            family: "Latrodectus",
+            genus: "Theridiidae",
+            dangerLevel: "Highly Dangerous",
+            pic: "redback")
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    func testSpiderDirAddSpider() {
+        spiderDir.addSpider(
+            name: "Redback Spider",
+            scientificName: "Latrodectus hasselti",
+            species: "hasselti",
+            family: "Latrodectus",
+            genus: "Theridiidae",
+            dangerLevel: "Highly Dangerous",
+            pic: "redback"
+        )
+        let spiderExists = spiderDir.spiders.contains { spider in
+            if case spider.name = "Redback Spider" {
+                return true
+            } else {
+                return false
+            }
+        }
+        XCTAssertTrue(spiderExists)
+    }
+    
+    func testSpiderDirRemoveSpider() {
+        spiderDir.removeSpider(name: "FunnelWeb")
+        let spiderExists = spiderDir.spiders.contains { spider in
+            if case spider.name = "Redback Spider" {
+                return true
+            } else {
+                return false
+            }
+        }
+        XCTAssertFalse(spiderExists)
     }
 
     func testSpiderName() {
@@ -45,6 +89,10 @@ class referencerTests: XCTestCase {
     
     func testSpiderGenus() {
         XCTAssertEqual(redback?.genus, "Theridiidae")
+    }
+    
+    func testSpiderDangerLevel() {
+        XCTAssertEqual(redback?.dangerLevel, "Highly Dangerous")
     }
     
     func testSpiderPic() {
