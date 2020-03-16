@@ -25,11 +25,6 @@ struct SpiderDetailView: View {
             Divider()
             VStack(alignment: .leading ,spacing: 10) {
                 HStack() {
-                    Text("Species:")
-                        .fontWeight(.bold)
-                    Text("\(spider.species)")
-                }
-                HStack() {
                     Text("Genus:")
                         .fontWeight(.bold)
                     Text("\(spider.genus)")

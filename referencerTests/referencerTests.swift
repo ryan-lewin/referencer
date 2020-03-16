@@ -18,7 +18,6 @@ class referencerTests: XCTestCase {
         spiderDir.addSpider(
             name: "Funnel Web",
             scientificName: "Atrax robustus",
-            species: "robustus",
             family: "Hexathelidae",
             genus: "Atrax",
             dangerLevel: "Highly Dangerous",
@@ -27,7 +26,6 @@ class referencerTests: XCTestCase {
         redback = Spider(
             name: "Redback Spider",
             scientificName: "Latrodectus hasselti",
-            species: "hasselti",
             family: "Latrodectus",
             genus: "Theridiidae",
             dangerLevel: "Highly Dangerous",
@@ -42,7 +40,6 @@ class referencerTests: XCTestCase {
         spiderDir.addSpider(
             name: "Redback Spider",
             scientificName: "Latrodectus hasselti",
-            species: "hasselti",
             family: "Latrodectus",
             genus: "Theridiidae",
             dangerLevel: "Highly Dangerous",
@@ -77,11 +74,6 @@ class referencerTests: XCTestCase {
     func testSpiderScientificName() {
         XCTAssertEqual(redback?.scientificName, "Latrodectus hasselti")
     }
-    
-    func testSpiderSpecies() {
-        XCTAssertEqual(redback?.species, "hasselti")
-    }
-    
     
     func testSpiderFamily() {
         XCTAssertEqual(redback?.family, "Latrodectus")

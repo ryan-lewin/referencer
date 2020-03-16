@@ -19,13 +19,12 @@ struct MasterView: View {
                         Image(self.spiderDir.spiders[i].pic)
                             .resizable()
                             .frame(width: 64.0, height: 64.0)
-                        Spacer()
                         Text(self.spiderDir.spiders[i].name)
-                            .fontWeight(.bold)
+                            .fontWeight(.light)
                         Spacer()
                         Text(self.spiderDir.spiders[i].dangerLevel)
-                            .fontWeight(.light)
-                            .foregroundColor(Color.green)
+                            .fontWeight(.bold)
+                        Spacer()
                     }
                 }
             }

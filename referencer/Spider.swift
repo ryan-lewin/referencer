@@ -11,7 +11,6 @@ import Foundation
 struct Spider {
     let name: String
     let scientificName: String
-    let species: String
     let family: String
     let genus: String
     let dangerLevel: String
