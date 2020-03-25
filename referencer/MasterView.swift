@@ -11,7 +11,6 @@ import SwiftUI
 struct MasterView: View {
     var colourScheme  = ["Highly Dangerous": "red", "Painful Bite": "yellow", "Low Risk": "green"]
     var spiderDir: SpiderDirectory
-//    @Binding var notes: [String]
     var body: some View {
         List {
             // Loops through array off spiders stored in SpiderDir

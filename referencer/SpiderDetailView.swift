@@ -9,52 +9,42 @@
 import SwiftUI
 
 struct SpiderDetailView: View {
-    let spider: Spider
-    @State var note: String = ""
+    @State var spider: Spider
+    
     var body: some View {
-
-        VStack() {
-            Text("Notes")
-//            TextField("Enter text", text: $note)
-//                .border(Color.black)
-//                .padding()
-//            ForEach(0..<spider.notes.count) { i in
-//                Text(self.spider.notes[i].content)
-//            }
-//            List {
-//                ForEach(0..<spider.notes.count) { i in
-//                    Text(self.spider.notes[i].content)
+        VStack(alignment: .leading) {
+//            VStack(alignment: .leading ,spacing: 10) {
+                Text("Notes")
+                    .font(.title)
+                TextField("Enter text", text: $spider.note)
+                    .border(Color.black)
+                    .padding()
+                Image("\(spider.pic)")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.bottom)
+                Text("\(spider.name)")
+                    .font(.title)
+                Text("\(spider.scientificName)")
+                    .font(.headline)
+                    .fontWeight(.light)
+    //            VStack(alignment: .leading ,spacing: 10) {
+                    HStack() {
+                        Text("Genus:")
+                            .fontWeight(.bold)
+                        Text("\(spider.genus)")
+                    }
+                    HStack() {
+                        Text("Family")
+                            .fontWeight(.bold)
+                        Text("\(spider.family)")
+                    }
+                    HStack() {
+                        Text("Danger Level")
+                            .fontWeight(.bold)
+                        Text("\(spider.dangerLevel)")
+                    }
 //                }
-//            }
-//            Spacer()
-            Image("\(spider.pic)")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(.bottom)
-//            Divider()
-            Text("\(spider.name)")
-                .font(.title)
-            Text("\(spider.scientificName)")
-                .font(.headline)
-                .fontWeight(.light)
-//            Divider()
-            VStack(alignment: .leading ,spacing: 10) {
-                HStack() {
-                    Text("Genus:")
-                        .fontWeight(.bold)
-                    Text("\(spider.genus)")
-                }
-                HStack() {
-                    Text("Family")
-                        .fontWeight(.bold)
-                    Text("\(spider.family)")
-                }
-                HStack() {
-                    Text("Danger Level")
-                        .fontWeight(.bold)
-                    Text("\(spider.dangerLevel)")
-                }
-            }
         }
     }
 }

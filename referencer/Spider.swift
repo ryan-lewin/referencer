@@ -15,7 +15,7 @@ class Spider: ObservableObject {
     let family: String
     let genus: String
     let dangerLevel: String
-    @Published var note: String?
+    @Published var note: String = ""
     // string contains image location
     let pic: String
     
