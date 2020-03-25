@@ -8,24 +8,26 @@
 
 import Foundation
 
-// Defines one spider species
+// Defines one spider species - spider is an observable object
 class Spider: ObservableObject {
     let name: String
     let scientificName: String
     let family: String
     let genus: String
     let dangerLevel: String
+    
+    //note var is in published prop wrapper si UI watches for changes
     @Published var note: String = ""
+    
     // string contains image location
     let pic: String
-    
+
     init(name: String, scientificName: String, family: String, genus: String, dangerLevel: String, pic: String) {
         self.name = name
         self.scientificName = scientificName
         self.family = family
         self.genus = genus
         self.dangerLevel = dangerLevel
-//        self.note = note
         self.pic = pic
     }
 }
