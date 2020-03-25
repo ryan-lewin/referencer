@@ -11,8 +11,10 @@ import SwiftUI
 struct MasterView: View {
     var colourScheme  = ["Highly Dangerous": "red", "Painful Bite": "yellow", "Low Risk": "green"]
     var spiderDir: SpiderDirectory
+//    @Binding var notes: [String]
     var body: some View {
         List {
+            // Loops through array off spiders stored in SpiderDir
             ForEach(0..<spiderDir.spiders.count) { i in
                 NavigationLink(destination: SpiderDetailView(spider: self.spiderDir.spiders[i])){
                     HStack() {
@@ -24,7 +26,6 @@ struct MasterView: View {
                         Spacer()
                         Text(self.spiderDir.spiders[i].dangerLevel)
                             .fontWeight(.bold)
-                        Spacer()
                     }
                 }
             }
