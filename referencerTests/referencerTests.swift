@@ -90,6 +90,15 @@ class referencerTests: XCTestCase {
     func testSpiderPic() {
          XCTAssertEqual(redback?.pic, "redback")
     }
+    
+    func testSpiderEmptyNote() {
+        XCTAssertEqual(redback?.note, "")
+    }
+    
+    func testSpiderNote() {
+        redback?.note = "This is a redback"
+        XCTAssertEqual(redback?.note, "This is a redback")
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
