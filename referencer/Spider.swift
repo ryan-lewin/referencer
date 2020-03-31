@@ -10,10 +10,12 @@ import Foundation
 
 // Defines one spider species - spider is an observable object
 class Spider: ObservableObject {
+    // Name common value assigned to spider
     let name: String
     let scientificName: String
     let family: String
     let genus: String
+    //
     let dangerLevel: String
     
     //note var is in published prop wrapper si UI watches for changes

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MasterView: View {
     var colourScheme  = ["Highly Dangerous": "red", "Painful Bite": "yellow", "Low Risk": "green"]
-    var spiderDir: SpiderDirectory
+    @State var spiderDir: SpiderDirectory
     var body: some View {
         List {
             // Loops through array off spiders stored in SpiderDir
@@ -31,3 +31,6 @@ struct MasterView: View {
         }
     }
 }
+
+//.onDelete { indices in
+//indices.forEach { self.spiderDir.spiders[i].remove(at: $0) }

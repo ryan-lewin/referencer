@@ -9,11 +9,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    var spiderDir: SpiderDirectory
+    @State var spiderDir: SpiderDirectory
     var body: some View {
         NavigationView {
             MasterView(spiderDir: spiderDir)
                 .navigationBarTitle("Spiders")
+            .navigationBarItems(
+                leading: EditButton(),
+                trailing: Button(
+                    action: {
+                        withAnimation { self.spiderDir.addSpider(name: "a", scientificName: "a", family: "a", genus: "a", dangerLevel: "a", pic: "redback") }
+                    }
+                ) {
+                    Image(systemName: "plus")
+                }
+            )
         }
             .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -21,7 +31,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(spiderDir: SpiderDirectory())
+        ContentView(spiderDir: SpiderDirectory(spiders: []))
     }
 }
 
