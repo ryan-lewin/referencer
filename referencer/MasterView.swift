@@ -27,10 +27,8 @@ struct MasterView: View {
                             .fontWeight(.bold)
                     }
                 }
-            }
+            }.onDelete { indices in indices.forEach { self.spiderDir.spiders.remove(at: $0) } }
         }
     }
 }
 
-//.onDelete { indices in
-//indices.forEach { self.spiderDir.spiders[i].remove(at: $0) }
