@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SpiderDetailView: View {
-    @State var spider: Spider
+    @ObservedObject var spider: Spider
     
     var body: some View {
         VStack() {

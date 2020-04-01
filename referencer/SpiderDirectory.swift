@@ -9,7 +9,7 @@
 // Defines SpiderDirectory including array of Spider types
 import Foundation
 
-class SpiderDirectory: ObservableObject {
+class SpiderDirectory: ObservableObject, Identifiable {
     @Published var spiders: [Spider] = []
     
     init(spiders: [Spider] ) {
@@ -17,7 +17,7 @@ class SpiderDirectory: ObservableObject {
     }
     
     // To add spiders to the directory
-    func addSpider(name: String, scientificName: String, family: String, genus: String, dangerLevel: String, pic: String) {
+    func addSpider(name: String = "Name", scientificName: String = "Scientific Name", family: String = "Family", genus: String = "Genus", dangerLevel: String = "Danger Level", pic: String = "redback") {
         let spider = Spider(name: name, scientificName: scientificName, family: family, genus: genus, dangerLevel: dangerLevel, pic: pic)
         spiders.append(spider)
     }

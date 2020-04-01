@@ -9,7 +9,7 @@
 import Foundation
 
 // Defines one spider species - spider is an observable object
-class Spider: ObservableObject {
+class Spider: ObservableObject, Identifiable {
     // Name common value assigned to spider
     let name: String
     let scientificName: String

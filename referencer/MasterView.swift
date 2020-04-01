@@ -10,20 +10,20 @@ import SwiftUI
 
 struct MasterView: View {
     var colourScheme  = ["Highly Dangerous": "red", "Painful Bite": "yellow", "Low Risk": "green"]
-    @State var spiderDir: SpiderDirectory
+    @ObservedObject var spiderDir: SpiderDirectory
     var body: some View {
         List {
             // Loops through array off spiders stored in SpiderDir
-            ForEach(0..<spiderDir.spiders.count) { i in
-                NavigationLink(destination: SpiderDetailView(spider: self.spiderDir.spiders[i])){
+            ForEach(spiderDir.spiders, id: \.name) { spider in
+                NavigationLink(destination: SpiderDetailView(spider: spider.self)){
                     HStack() {
-                        Image(self.spiderDir.spiders[i].pic)
+                        Image(spider.pic)
                             .resizable()
                             .frame(width: 64.0, height: 64.0)
-                        Text(self.spiderDir.spiders[i].name)
+                        Text(spider.name)
                             .fontWeight(.light)
                         Spacer()
-                        Text(self.spiderDir.spiders[i].dangerLevel)
+                        Text(spider.dangerLevel)
                             .fontWeight(.bold)
                     }
                 }

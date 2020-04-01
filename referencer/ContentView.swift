@@ -9,16 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var spiderDir: SpiderDirectory
+    var spiderDir: SpiderDirectory
     var body: some View {
         NavigationView {
             MasterView(spiderDir: spiderDir)
-                .navigationBarTitle("Spiders")
+            .navigationBarTitle("Spiders")
             .navigationBarItems(
                 leading: EditButton(),
                 trailing: Button(
                     action: {
-                        withAnimation { self.spiderDir.addSpider(name: "a", scientificName: "a", family: "a", genus: "a", dangerLevel: "a", pic: "redback") }
+                        withAnimation { self.spiderDir.addSpider() }
                     }
                 ) {
                     Image(systemName: "plus")
