@@ -29,35 +29,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                           family: "Latrodectus",
                           genus: "Theridiidae",
                           dangerLevel: "Highly Dangerous",
-                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
+                          picURL: "https://images.theconversation.com/files/114206/original/image-20160308-15308-128ge6u.jpg?ixlib=rb-1.1.0&q=30&auto=format&w=600&h=432&fit=crop&dpr=2")
         
         spiderDir.addSpider(name: "Funnel Web",
                           scientificName: "Atrax robustus",
                           family: "Hexathelidae",
                           genus: "Atrax",
                           dangerLevel: "Highly Dangerous",
-                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
+                          picURL: "https://cdn.mos.cms.futurecdn.net/mxk67kpESuQmz5ewBHJ8r3-1200-80.jpg")
         
         spiderDir.addSpider(name: "White-Tail Spider",
                           scientificName: "Atrax robustus",
                           family: "Lamponidae",
                           genus: "Lampona",
                           dangerLevel: "Highly Dangerous",
-                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
+                          picURL: "https://lh5.googleusercontent.com/proxy/18ADrih7vtbm6KsTshb8VaupTMJQ08q9L767Es5pnguDQ_yjErwQ0in6vgwRQcZnRCDit9R6TcTl3l4dxNoqGknzgLXD54EIC8GvwAIF68k5F1foEQ")
         
         spiderDir.addSpider(name: "Mouse Spider",
                           scientificName: "Atrax robustus",
                           family: "Actinopodidae",
                           genus: "Missulena",
                           dangerLevel: "Painful Bite",
-                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
+                          picURL: "https://biomedicalsciences.unimelb.edu.au/__data/assets/image/0006/2777370/Mouse-spider.jpg")
         
         spiderDir.addSpider(name: "Huntsman",
                           scientificName: "Atrax robustus",
                           family: "Sparassidae",
                           genus: "Isopoda",
                           dangerLevel: "Low Risk",
-                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
+                          picURL: "https://lirp-cdn.multiscreensite.com/2ace1129/dms3rep/multi/opt/white-tail-spider-640w.jpg")
         
         let contentView = ContentView(spiderDir: spiderDir)
 

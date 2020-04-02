@@ -17,7 +17,7 @@ class SpiderDirectory: ObservableObject, Identifiable {
     }
     
     // To add spiders to the directory
-    func addSpider(name: String = "Name", scientificName: String = "Scientific Name", family: String = "Family", genus: String = "Genus", dangerLevel: String = "Danger Level", picURL: String = "") {
+    func addSpider(name: String = "", scientificName: String = "", family: String = "", genus: String = "", dangerLevel: String = "", picURL: String = "") {
         let spider = Spider(name: name, scientificName: scientificName, family: family, genus: genus, dangerLevel: dangerLevel, picURL: picURL)
         spiders.append(spider)
 

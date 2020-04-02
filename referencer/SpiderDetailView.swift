@@ -19,8 +19,7 @@ struct SpiderDetailView: View {
                 .border(Color.gray)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
-//            spider.img
-            spider.getImg(imgURL: spider.picURL)
+            spider.getImg(url: spider.picURL)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.bottom)
@@ -45,9 +44,9 @@ struct SpiderDetailView: View {
                     TextField("Enter danger level", text: $spider.dangerLevel)
                 }
                 HStack() {
-                    Text("Enter URL")
+                    Text("Image URL")
                         .fontWeight(.bold)
-                    TextField("Image Url", text: $spider.picURL)
+                    TextField("Enter Url", text: $spider.picURL)
                 }
             }.padding()
             Spacer()

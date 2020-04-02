@@ -25,7 +25,9 @@ class Spider: ObservableObject, Identifiable {
     @Published var note: String = ""
     
     // string contains image location
-    @Published var picURL: String
+    @Published var picURL: String = ""
+    var imageCache = Dictionary<String, Image>()
+    var pic : Image
 
     init(name: String, scientificName: String, family: String, genus: String, dangerLevel: String, picURL: String) {
         self.name = name
@@ -34,26 +36,28 @@ class Spider: ObservableObject, Identifiable {
         self.genus = genus
         self.dangerLevel = dangerLevel
         self.picURL = picURL
+        self.pic = imageCache[picURL] ?? Image("placeholder")
     }
+    
 }
 
 extension Spider {
-    func getImg(imgURL: String) -> Image{
-        guard let imgURL = URL(string: self.picURL) else {
-            return Image("placeholder")
+    func getImg(url: String) -> Image{
+        if self.pic == imageCache[url] {
+            return self.pic
         }
         
-        guard let imgData = try? Data(contentsOf: imgURL) else {
-            return Image("placeholder")
-        }
-        
-        guard let uiImg = UIImage(data: imgData) else {
+        guard let imgURL = URL(string: self.picURL),
+        let imgData = try? Data(contentsOf: imgURL),
+        let uiImg = UIImage(data: imgData) else {
             return Image("placeholder")
         }
         
         let  downloadedImg = Image(uiImage: uiImg)
-        
+        imageCache[url] = downloadedImg
+        print(self.imageCache.count)
         return downloadedImg
+        
     }
 }
 
