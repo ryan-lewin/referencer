@@ -9,7 +9,7 @@
 // Defines SpiderDirectory including array of Spider types
 import Foundation
 
-class SpiderDirectory: ObservableObject, Identifiable {
+class SpiderDirectory: ObservableObject {
     @Published var spiders: [Spider] = []
     
     init(spiders: [Spider] ) {

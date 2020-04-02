@@ -9,10 +9,11 @@
 import SwiftUI
 
 struct SpiderDetailView: View {
+//    @ObservedObject var spiderDir: SpiderDirectory
     @ObservedObject var spider: Spider
     
     var body: some View {
-        VStack() {
+        VStack(alignment: .center) {
             Text("Notes")
                 .font(.title)
             TextField("Enter text", text: $spider.note)
@@ -23,26 +24,27 @@ struct SpiderDetailView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.bottom)
-            Text("\(spider.name)")
-                .font(.title)
-            Text("\(spider.scientificName)")
-                .font(.headline)
-                .fontWeight(.light)
-            HStack() {
-                Text("Genus:")
-                    .fontWeight(.bold)
-                Text("\(spider.genus)")
-            }
-            HStack() {
-                Text("Family")
-                    .fontWeight(.bold)
-                Text("\(spider.family)")
-            }
-            HStack() {
-                Text("Danger Level")
-                    .fontWeight(.bold)
-                Text("\(spider.dangerLevel)")
-            }
+            VStack() {
+                TextField("Enter name", text: $spider.name)
+                    .font(.title)
+                TextField("Enter scientific name", text: $spider.scientificName)
+                    .font(.headline)
+                HStack(alignment: .center) {
+                    Text("Genus:")
+                        .fontWeight(.bold)
+                    TextField("Enter genus", text: $spider.genus)
+                }
+                HStack(alignment: .center) {
+                    Text("Family")
+                        .fontWeight(.bold)
+                    TextField("Enter family", text: $spider.family)
+                }
+                HStack() {
+                    Text("Danger Level")
+                        .fontWeight(.bold)
+                    TextField("Enter danger level", text: $spider.dangerLevel)
+                }
+            }.padding()
             Spacer()
         }
     }

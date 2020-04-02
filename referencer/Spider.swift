@@ -10,19 +10,20 @@ import Foundation
 
 // Defines one spider species - spider is an observable object
 class Spider: ObservableObject, Identifiable {
+    var id = UUID()
     // Name common value assigned to spider
-    let name: String
-    let scientificName: String
-    let family: String
-    let genus: String
+    @Published var name: String
+    @Published var scientificName: String
+    @Published var family: String
+    @Published var genus: String
     //
-    let dangerLevel: String
+    @Published var dangerLevel: String
     
     //note var is in published prop wrapper si UI watches for changes
     @Published var note: String = ""
     
     // string contains image location
-    let pic: String
+    @Published var pic: String
 
     init(name: String, scientificName: String, family: String, genus: String, dangerLevel: String, pic: String) {
         self.name = name

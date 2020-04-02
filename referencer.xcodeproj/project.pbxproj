@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E439D1D72435682400B59F6D /* SpiderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439D1D62435682400B59F6D /* SpiderRowView.swift */; };
+		E439D1D82435682400B59F6D /* SpiderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439D1D62435682400B59F6D /* SpiderRowView.swift */; };
 		E48278D52417113200FE687D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278D42417113200FE687D /* AppDelegate.swift */; };
 		E48278D72417113200FE687D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278D62417113200FE687D /* SceneDelegate.swift */; };
 		E48278D92417113200FE687D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278D82417113200FE687D /* ContentView.swift */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E439D1D62435682400B59F6D /* SpiderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderRowView.swift; sourceTree = "<group>"; };
 		E48278D12417113200FE687D /* referencer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = referencer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48278D42417113200FE687D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E48278D62417113200FE687D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 			children = (
 				E4D8A31C241E0D5700655AEE /* MasterView.swift */,
 				E4D8A31E241E0D9100655AEE /* SpiderDetailView.swift */,
+				E439D1D62435682400B59F6D /* SpiderRowView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -295,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E439D1D72435682400B59F6D /* SpiderRowView.swift in Sources */,
 				E4D8A31D241E0D5700655AEE /* MasterView.swift in Sources */,
 				E48278D52417113200FE687D /* AppDelegate.swift in Sources */,
 				E48278D72417113200FE687D /* SceneDelegate.swift in Sources */,
@@ -309,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E439D1D82435682400B59F6D /* SpiderRowView.swift in Sources */,
 				E48278EC2417113400FE687D /* referencerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
