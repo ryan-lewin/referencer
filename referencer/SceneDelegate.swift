@@ -29,35 +29,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                           family: "Latrodectus",
                           genus: "Theridiidae",
                           dangerLevel: "Highly Dangerous",
-                          pic: "redback")
+                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
         
         spiderDir.addSpider(name: "Funnel Web",
                           scientificName: "Atrax robustus",
                           family: "Hexathelidae",
                           genus: "Atrax",
                           dangerLevel: "Highly Dangerous",
-                          pic: "funnelweb")
+                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
         
         spiderDir.addSpider(name: "White-Tail Spider",
                           scientificName: "Atrax robustus",
                           family: "Lamponidae",
                           genus: "Lampona",
                           dangerLevel: "Highly Dangerous",
-                          pic: "whitetail")
+                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
         
         spiderDir.addSpider(name: "Mouse Spider",
                           scientificName: "Atrax robustus",
                           family: "Actinopodidae",
                           genus: "Missulena",
                           dangerLevel: "Painful Bite",
-                          pic: "mousespider")
+                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
         
         spiderDir.addSpider(name: "Huntsman",
                           scientificName: "Atrax robustus",
                           family: "Sparassidae",
                           genus: "Isopoda",
                           dangerLevel: "Low Risk",
-                          pic: "huntsman")
+                          picURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Latrodectus_hasseltii_close.jpg/2560px-Latrodectus_hasseltii_close.jpg")
         
         let contentView = ContentView(spiderDir: spiderDir)
 

@@ -14,7 +14,9 @@ struct SpiderRowView: View {
     var body: some View {
         NavigationLink(destination: SpiderDetailView(spider: spider.self )){
             HStack() {
-                Image(spider.pic)
+//                Image(spider.pic)
+//                spider.img
+                spider.getImg(imgURL: spider.picURL)
                     .resizable()
                     .frame(width: 64.0, height: 64.0)
                 Text(spider.name)

@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct SpiderDetailView: View {
-//    @ObservedObject var spiderDir: SpiderDirectory
     @ObservedObject var spider: Spider
     
     var body: some View {
@@ -20,7 +19,8 @@ struct SpiderDetailView: View {
                 .border(Color.gray)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
-            Image("\(spider.pic)")
+//            spider.img
+            spider.getImg(imgURL: spider.picURL)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.bottom)
@@ -43,6 +43,11 @@ struct SpiderDetailView: View {
                     Text("Danger Level")
                         .fontWeight(.bold)
                     TextField("Enter danger level", text: $spider.dangerLevel)
+                }
+                HStack() {
+                    Text("Enter URL")
+                        .fontWeight(.bold)
+                    TextField("Image Url", text: $spider.picURL)
                 }
             }.padding()
             Spacer()
